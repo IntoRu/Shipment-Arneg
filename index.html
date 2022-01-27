@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отгрузка Arneg</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h3>Отгрузка</h3>
+        </header>
+
+        <div class="table-wrapper">
+            <table class="table-users">
+                <tr>
+                    <th>Номер машины</th>
+                    <th>Заказчик</th>
+                    <th>Место назначения</th>
+                    <th>Номера заказов</th>
+                    <th>Редактирование</th>
+                </tr>
+
+             
+            </table>
+
+            <button class="btn btn-add">Добавить машину</button>
+        </div>
+
+        <!-- Добаляем модальное окно -->
+        <div class="add-modal modal-wrapper">
+            <div class="modal">
+                <div class="modal-header"><h3>Добавить машину</h3></div>
+                <div class="modal-body">
+                    <form class="form" autocomplete="off">
+                        <input type="text" name="numberCar" placeholder="Номер машины">
+                        <input type="text" name="customer" placeholder="Заказчик">
+                        <input type="text" name="location" placeholder="Место назначения">
+                        <input type="text" name="idOrder" placeholder="Номера заказов">
+                        <button class="btn btn-modal">Добавить</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+                <!-- Добаляем модальное окно редактирования -->
+                <div class="edit-modal modal-wrapper">
+                    <div class="modal">
+                        <div class="modal-header"><h3>Изменить машину</h3></div>
+                        <div class="modal-body">
+                            <form class="form" autocomplete="off">
+                                <input type="text" name="numberCar" placeholder="Номер машины">
+                                <input type="text" name="customer" placeholder="Заказчик">
+                                <input type="text" name="location" placeholder="Место назначения">
+                                <input type="text" name="idOrder" placeholder="Номера заказов">
+                                <button class="btn btn-modal">Изменить</button>
+        
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+    </div>
+
+
+
+    
+
+    
+   
+
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script>
+
+            // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyB55doicpJ_fGt1U1cN39le46BHKbcI5z4",
+            authDomain: "shipment-arneg.firebaseapp.com",
+            projectId: "shipment-arneg",
+            storageBucket: "shipment-arneg.appspot.com",
+            messagingSenderId: "442352798942",
+            appId: "1:442352798942:web:f10b4b67ecb5a05a69864f"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig)
+        const db = firebase.firestore()
+
+        //при следующих моментах будет менятся только константа конфигурации остальное всё так же
+
+</script>
+
+<script src="./script.js"></script>
+
+
+
+         
+            
+        
+
+
+    
+</body>
+</html>
